@@ -1,5 +1,8 @@
 package br.com.jnctecnologia.bancodesangue.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public record CandidatoDto(
         String nome,
         String cpf,
