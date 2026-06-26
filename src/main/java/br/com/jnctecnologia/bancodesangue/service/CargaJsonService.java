@@ -1,6 +1,7 @@
 package br.com.jnctecnologia.bancodesangue.service;
 
-import br.com.jnctecnologia.bancodesangue.dto.CandidatoDto;
+import br.com.jnctecnologia.bancodesangue.dto.CandidatoDTO;
+import br.com.jnctecnologia.bancodesangue.dto.projection.CandidatosPorEstadoProjection;
 import br.com.jnctecnologia.bancodesangue.entity.Candidato;
 import br.com.jnctecnologia.bancodesangue.mapper.CandidatoMapper;
 import br.com.jnctecnologia.bancodesangue.repository.CandidatoRepository;
@@ -24,7 +25,7 @@ public class CargaJsonService {
     final CandidatoRepository candidatoRepository;
 
     public void carregarDados(MultipartFile file) throws IOException {
-        List<CandidatoDto> dados = mapper.readValue(
+        List<CandidatoDTO> dados = mapper.readValue(
                 file.getInputStream(),
                 new TypeReference<>() {
                 }
@@ -39,4 +40,6 @@ public class CargaJsonService {
         }
 
     }
+
+
 }

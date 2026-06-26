@@ -1,6 +1,6 @@
 package br.com.jnctecnologia.bancodesangue.mapper;
 
-import br.com.jnctecnologia.bancodesangue.dto.CandidatoDto;
+import br.com.jnctecnologia.bancodesangue.dto.CandidatoDTO;
 import br.com.jnctecnologia.bancodesangue.entity.Candidato;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -17,5 +17,5 @@ public interface CandidatoMapper {
             target = "tipoSanguineo",
             source = "tipo_sanguineo"
     )
-    Candidato toEntity(CandidatoDto dto);
+    Candidato toEntity(CandidatoDTO dto);
 }
